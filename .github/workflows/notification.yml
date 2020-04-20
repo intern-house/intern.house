@@ -3,22 +3,18 @@ name: Discord Notification
 on:
   push:
     branches:
-    - master
+      - master
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Discord notification
-      env:
-        DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
-        DISCORD_USERNAME: Intern.House Git Bot
-        DISCORD_AVATAR: https://i.imgur.com/79bgPSZ.png
-      uses: Ilshidur/action-discord@master
-      with:
-        args: '(Front-End) A new commit has been pushed to master branch. '
-    - name: Discord notification
-      env:
-        DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
-      uses: Ilshidur/action-discord@master
+      - name: Discord notification
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+          DISCORD_USERNAME: Intern.House Git Bot
+          DISCORD_AVATAR: https://i.imgur.com/79bgPSZ.png
+        uses: Ilshidur/action-discord@master
+        with:
+          args: '({{ EVENT_PAYLOAD.repository.full_name }}) A new commit has been accepted.'
