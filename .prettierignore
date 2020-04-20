@@ -1,0 +1,13 @@
+dist/
+node_modules/
+coverage/
+build/
+public/
+.github/
+*.md
+*.min.*
+*.html
+*.yml
+
+package-lock.json
+package.json

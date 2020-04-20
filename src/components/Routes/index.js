@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import * as ROUTES from '../../constants/routes';
-import { NavAuthed, NavNotAuthed } from '../Navigation';
+import { NavAuthed } from '../Navigation';
 import Footer from '../Footer';
 import {
 	LandingContainer,
