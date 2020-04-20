@@ -8,3 +8,6 @@ public/
 *.min.*
 *.html
 *.yml
+
+package-lock.json
+package.json
