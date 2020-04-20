@@ -17,4 +17,4 @@ jobs:
           DISCORD_AVATAR: https://i.imgur.com/79bgPSZ.png
         uses: Ilshidur/action-discord@master
         with:
-          args: '({{ EVENT_PAYLOAD.repository.full_name }}) || {{ EVENT_PAYLOAD.repository.commit_comment }}.'
+          args: '({{ EVENT_PAYLOAD.repository.full_name }}) || A update was made to the master branch.'
