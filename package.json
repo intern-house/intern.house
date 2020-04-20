@@ -22,6 +22,17 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "./src/*.{js,jsx,ts,tsx}": [
+      "npx prettier --write",
+      "eslint src/*.js --fix-dry-run"
+    ]
+  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -35,7 +46,10 @@
     ]
   },
   "devDependencies": {
-    "eslint-config-prettier": "^6.10.1",
-    "eslint-plugin-prettier": "^3.1.2"
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.1.6",
+    "prettier": "^2.0.4"
   }
 }
