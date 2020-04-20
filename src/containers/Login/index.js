@@ -9,8 +9,4 @@ const SignInContainer = () => {
 	return <Container>Sign In</Container>;
 };
 
-const ForgetPasswordContainer = () => {
-	return <Container>Forget Password</Container>;
-};
-
-export { SignUpContainer, SignInContainer, ForgetPasswordContainer };
+export { SignUpContainer, SignInContainer };

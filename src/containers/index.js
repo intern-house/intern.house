@@ -3,11 +3,10 @@ import AccountContainer from './Account';
 import ListingsContainer from './Listings';
 import NetworkContainer from './Network';
 import MessagesContainer from './Messages';
-
+import {ForgetPasswordContainer} from './Login/ForgetPassword'
 import {
 	SignInContainer,
 	SignUpContainer,
-	ForgetPasswordContainer,
 } from './Login';
 
 export {
