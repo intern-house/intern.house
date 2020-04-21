@@ -18,24 +18,27 @@ const Routes = () => {
 	return (
 		<>
 			<Router>
-				<NavNotAuthed />
+				<div className={'body-content'}>
+					<NavNotAuthed />
+					<Switch>
+						<Route exact path={ROUTES.LANDING} component={LandingContainer} />
+						<Route exact path={ROUTES.LISTINGS} component={ListingsContainer} />
+						<Route exact path={ROUTES.NETWORK} component={NetworkContainer} />
+						<Route exact path={ROUTES.MESSAGES} component={MessagesContainer} />
+						<Route exact path={ROUTES.ACCOUNT} component={AccountContainer} />
+						<Route exact path={ROUTES.SIGN_IN} component={SignInContainer} />
+						<Route exact path={ROUTES.SIGN_UP} component={SignUpContainer} />
+						<Route
+							exact
+							path={ROUTES.FORGET}
+							component={ForgetPasswordContainer}
+						/>
+					</Switch>
 
-				<Switch>
-					<Route exact path={ROUTES.LANDING} component={LandingContainer} />
-					<Route exact path={ROUTES.LISTINGS} component={ListingsContainer} />
-					<Route exact path={ROUTES.NETWORK} component={NetworkContainer} />
-					<Route exact path={ROUTES.MESSAGES} component={MessagesContainer} />
-					<Route exact path={ROUTES.ACCOUNT} component={AccountContainer} />
-					<Route exact path={ROUTES.SIGN_IN} component={SignInContainer} />
-					<Route exact path={ROUTES.SIGN_UP} component={SignUpContainer} />
-					<Route
-						exact
-						path={ROUTES.FORGET}
-						component={ForgetPasswordContainer}
-					/>
-				</Switch>
-
-				<Footer />
+					<div className={'footer-content'}>
+						<Footer />
+					</div>
+				</div>
 			</Router>
 		</>
 	);
