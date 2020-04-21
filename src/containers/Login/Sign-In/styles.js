@@ -21,14 +21,6 @@ export const StyledButton = styled(Button)`
 	border-radius: 5px;
 `;
 
-export const LogoImg = styled.img`
-	position: absolute;
-	top: 0;
-	right: 15px;
-	width: 35px;
-	height: 35px;
-`;
-
 export const HeroImg = styled.img`
 	display: block;
 	margin: auto;

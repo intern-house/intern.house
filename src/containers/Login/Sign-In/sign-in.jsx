@@ -3,14 +3,12 @@ import { Row, Col, Space, Typography, Form, Input, Checkbox } from 'antd';
 import {
 	Container,
 	StyledButton,
-	LogoImg,
 	HeroImg,
 	SocialImg,
 	Background,
 } from './styles';
 import { Link } from 'react-router-dom';
 
-import Logo from '../../../assets/img/Logo.png';
 import HeroImage from '../../../assets/svg/Login/Sign-In/Hero-Image.svg';
 import Facebook from '../../../assets/svg/Login/Sign-In/Facebook.svg';
 import Google from '../../../assets/svg/Login/Sign-In/Google.svg';
@@ -38,7 +36,6 @@ const SignInContainer = () => {
 
 					<Col xs={24} md={12} className={'p-xs-1 p-md-3'}>
 						<Title className={'mb-5'}>Sign in</Title>
-						<LogoImg src={Logo} />
 
 						<Form layout={'vertical'} form={form} onFinish={onFinish}>
 							<Form.Item
