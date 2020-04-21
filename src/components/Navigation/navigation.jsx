@@ -54,7 +54,7 @@ export const NavNotAuthed = () => {
 					<Link to="/listings">Listings</Link>
 				</StyledMenuItem>
 				<StyledMenuItem key="signin">
-					<Link to="/signin">Login</Link>
+					<Link to="/signin">Sign In</Link>
 				</StyledMenuItem>
 			</Menu>
 		</StyledMenu>

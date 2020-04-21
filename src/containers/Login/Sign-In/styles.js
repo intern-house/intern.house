@@ -55,6 +55,6 @@ export const Background = styled.div`
 	background-size: cover;
 
 	@media (max-width: 768px) {
-		background-size: contain;
+		background-color: #c0e6ff;
 	}
 `;
