@@ -53,9 +53,6 @@ export const NavNotAuthed = () => {
 			</VerticalAlign>
 
 			<Menu mode="horizontal">
-				<StyledMenuItem key="home">
-					<Link to="/">Home</Link>
-				</StyledMenuItem>
 				<StyledMenuItem key="listings">
 					<Link to="/listings">Listings</Link>
 				</StyledMenuItem>
