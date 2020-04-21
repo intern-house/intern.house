@@ -21,9 +21,6 @@ export const NavAuthed = () => {
 			</VerticalAlign>
 
 			<Menu mode="horizontal">
-				<StyledMenuItem key="1">
-					<Link to="/">Home</Link>
-				</StyledMenuItem>
 				<StyledMenuItem key="2">
 					<Link to="/network">Network</Link>
 				</StyledMenuItem>
