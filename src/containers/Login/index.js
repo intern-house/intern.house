@@ -1,12 +1,10 @@
 import React from 'react';
 import { Container } from './styles';
 
+import SignInContainer from './Sign-In';
+
 const SignUpContainer = () => {
 	return <Container>Sign Up</Container>;
-};
-
-const SignInContainer = () => {
-	return <Container>Sign In</Container>;
 };
 
 const ForgetPasswordContainer = () => {

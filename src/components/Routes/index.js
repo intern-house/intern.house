@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import * as ROUTES from '../../constants/routes';
-import { NavAuthed } from '../Navigation';
+import { NavNotAuthed } from '../Navigation';
 import Footer from '../Footer';
 import {
 	LandingContainer,
@@ -18,7 +18,7 @@ const Routes = () => {
 	return (
 		<>
 			<Router>
-				<NavAuthed />
+				<NavNotAuthed />
 
 				<Switch>
 					<Route exact path={ROUTES.LANDING} component={LandingContainer} />
