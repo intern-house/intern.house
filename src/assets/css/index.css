@@ -1,3 +1,6 @@
+body {
+	overflow-x: hidden;
+}
 .body-content {
 	display: flex;
 	flex-direction: column;

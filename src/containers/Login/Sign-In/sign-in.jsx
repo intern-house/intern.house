@@ -1,6 +1,13 @@
 import React from 'react';
 import { Row, Col, Space, Typography, Form, Input, Checkbox } from 'antd';
-import { Container, StyledButton, LogoImg, HeroImg, SocialImg } from './styles';
+import {
+	Container,
+	StyledButton,
+	LogoImg,
+	HeroImg,
+	SocialImg,
+	Background,
+} from './styles';
 import { Link } from 'react-router-dom';
 
 import Logo from '../../../assets/img/Logo.png';
@@ -22,6 +29,7 @@ const SignInContainer = () => {
 
 	return (
 		<>
+			<Background></Background>
 			<Container className={'p-5'}>
 				<Row>
 					<Col xs={0} md={12}>
@@ -85,12 +93,14 @@ const SignInContainer = () => {
 							</Space>
 						</Form>
 
-						<p>Or you can join with</p>
-						<Space size={10}>
-							<SocialImg src={Facebook} />
-							<SocialImg src={Google} />
-							<SocialImg src={Twitter} />
-						</Space>
+						<div>
+							<p>Or you can join with</p>
+							<Space size={10}>
+								<SocialImg src={Facebook} />
+								<SocialImg src={Google} />
+								<SocialImg src={Twitter} />
+							</Space>
+						</div>
 					</Col>
 				</Row>
 			</Container>
