@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+        steps:
       - name: Discord notification
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
@@ -18,3 +19,8 @@ jobs:
         uses: Ilshidur/action-discord@master
         with:
           args: '({{ EVENT_PAYLOAD.repository.full_name }}) || A update was made to the master branch.'
+
+      - name: Discord notification
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+        uses: Ilshidur/action-discord@master
