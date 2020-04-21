@@ -26,7 +26,7 @@ class LandingContainer extends Component {
 
 		return (
 			<Container>
-				<p className="mt-5">Landing Page</p>
+				<p>Landing Page</p>
 				<br />
 				{serverStatus}
 			</Container>
