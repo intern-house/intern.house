@@ -1,19 +1,18 @@
 import React from 'react';
-import { StyledFooter, Divider, Div } from './styles';
+import { Row, Col } from 'antd';
+import { StyledFooter } from './styles';
 
 const Footer = () => {
 	return (
 		<>
 			<StyledFooter>
-				<Divider />
-
-				<Div>
-					<p>Developed by Intern.House © 2020. All rights reserved.</p>
-					<p>
+				<Row justify={'space-between'}>
+					<Col>Developed by Intern.House © 2020. All rights reserved.</Col>
+					<Col>
 						Contact us at
 						<a href="mailto:support@intern.house"> support@intern.house</a>.
-					</p>
-				</Div>
+					</Col>
+				</Row>
 			</StyledFooter>
 		</>
 	);
