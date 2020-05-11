@@ -25,8 +25,7 @@ import {
 import { Link } from 'react-router-dom';
 
 import MainLogo from '../../../assets/img/logo.png';
-import HeroImage from '../../../assets/svg/Login/Sign-Up/start_up.svg';
-
+// import HeroImage from '../../../assets/svg/Login/Sign Up/start_up.svg;';
 const SignUpContainer = () => {
 	const [form] = Form.useForm();
 
@@ -181,7 +180,7 @@ const SignUpContainer = () => {
 								</Checkbox.Group>
 							</Col>
 
-							<HeroImg src={HeroImage}></HeroImg>
+							{/* <HeroImg src={HeroImage}></HeroImg> */}
 						</Row>
 						<Row style={{ marginLeft: '5%' }}>
 							<Col>
