@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import BGImage from '../../../assets/svg/Login/Sign-In/Background.png';
-// import HeroImage from '../../../assets/svg/Login/Sign-Up/startup.png';
 
 export const Container = styled.div`
 	position: relative;
