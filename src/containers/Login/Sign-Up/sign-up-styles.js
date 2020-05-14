@@ -103,7 +103,7 @@ export const Background = styled.div`
 export const HeroImg = styled.img`
 	position: absolute;
 	margin: auto;
-	width: 54vh;
+	width: 54.5vh;
 	left: 63%;
 	top: 79%;
 
