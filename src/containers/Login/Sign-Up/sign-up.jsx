@@ -1,16 +1,6 @@
 import React, { useState } from 'react';
 
-import {
-	Col,
-	Row,
-	Radio,
-	Card,
-	Form,
-	Space,
-	Input,
-	Checkbox,
-	Button,
-} from 'antd';
+import { Col, Row, Radio, Card, Form, Space, Input, Checkbox } from 'antd';
 
 import {
 	Container,
