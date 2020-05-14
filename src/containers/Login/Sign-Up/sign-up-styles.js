@@ -8,13 +8,6 @@ export const Container = styled.div`
 	background-color: white;
 	box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.25);
 	border-radius: 8px;
-	box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.25);
-	width: 50%;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 5%;
-	align-items: center;
 
 	@media (max-width: 1200px) {
 		margin: 3.5vh auto 2vh;
@@ -110,28 +103,28 @@ export const Background = styled.div`
 export const HeroImg = styled.img`
 	position: absolute;
 	margin: auto;
-	width: 50vh;
+	width: 54vh;
 	left: 63%;
 	top: 79%;
 
 	@media (max-width: 2500px) {
-		width: 49.5vh;
+		width: 53vh;
 	}
 
 	@media (max-width: 2300px) {
-		width: 49.5vh;
+		width: 53vh;
 	}
 
 	@media (max-width: 2200px) {
-		width: 49.5vh;
+		width: 53vh;
 	}
 
 	@media (max-width: 2000px) {
-		width: 49.5vh;
+		width: 53vh;
 	}
 
 	@media (max-width: 1700px) {
-		width: 49.5vh;
+		width: 53vh;
 	}
 
 	@media (max-width: 500px) {
