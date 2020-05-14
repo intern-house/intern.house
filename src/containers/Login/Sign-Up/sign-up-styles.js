@@ -110,28 +110,28 @@ export const Background = styled.div`
 export const HeroImg = styled.img`
 	position: absolute;
 	margin: auto;
-	width: 61vh;
+	width: 50vh;
 	left: 63%;
-	top: 61%;
+	top: 79%;
 
 	@media (max-width: 2500px) {
-		width: 62vh;
+		width: 49.5vh;
 	}
 
 	@media (max-width: 2300px) {
-		width: 62vh;
+		width: 49.5vh;
 	}
 
 	@media (max-width: 2200px) {
-		width: 65vh;
+		width: 49.5vh;
 	}
 
 	@media (max-width: 2000px) {
-		width: 65vh;
+		width: 49.5vh;
 	}
 
 	@media (max-width: 1700px) {
-		width: 65vh;
+		width: 49.5vh;
 	}
 
 	@media (max-width: 500px) {
