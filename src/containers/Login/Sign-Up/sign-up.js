@@ -11,21 +11,22 @@ import {
 	Checkbox,
 	Button,
 } from 'antd';
+
 import {
 	Container,
 	Title,
 	SignUp,
 	SignIn,
-	Logo,
 	RadioStyle,
 	CheckboxStyle,
 	Background,
 	HeroImg,
 } from './sign-up-styles';
+
 import { Link } from 'react-router-dom';
 
-import MainLogo from '../../../assets/img/logo.png';
 import HeroImage from '../../../assets/svg/Login/Sign-Up/start_up.svg';
+
 const SignUpContainer = () => {
 	const [form] = Form.useForm();
 
