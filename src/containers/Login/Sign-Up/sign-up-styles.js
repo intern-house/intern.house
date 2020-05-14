@@ -127,6 +127,10 @@ export const HeroImg = styled.img`
 		width: 53vh;
 	}
 
+	@media (max-width: 1200px) {
+		width: 53vh;
+	}
+
 	@media (max-width: 500px) {
 		left: 40%;
 		top: 90%;
