@@ -112,7 +112,7 @@ const SignUpContainer = () => {
 												message: 'Please confirm your password',
 											},
 											({ getFieldValue }) => ({
-												validator(value) {
+												validator({ value }) {
 													if (!value || getFieldValue('password') === value) {
 														return Promise.resolve();
 													}
