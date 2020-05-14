@@ -27,7 +27,6 @@ export const Title = styled.p`
 	margin-left: 1.5%;
 	font-size: 35px;
 	color: rgba(0, 0, 0, 0.85);
-	font-family: 'Inter', sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	@media (max-width: 500px) {
@@ -36,7 +35,6 @@ export const Title = styled.p`
 `;
 
 export const Subtitle = styled.p`
-	font-family: 'Inter', sans-serif;
 	font-size: 12px;
 	margin-left: 20.2%;
 	margin-bottom: 1%;
@@ -55,13 +53,10 @@ export const Check = styled.div`
 
 export const Policy = styled.p`
 	display: inline;
-	font-family: 'Roboto', sans-serif;
 	font-size: 14px;
 `;
 
 export const SignUp = styled.div`
-	font-family: 'Inter', sans-serif;
-
 	@media (max-width: 500px) {
 		margin-left: -40%;
 	}
@@ -76,7 +71,6 @@ export const SignIn = styled.a`
 `;
 
 export const RadioStyle = styled.div`
-	font-family: 'Inter', sans-serif;
 	font-size: 14px;
 	margin-left: 35%;
 
@@ -96,7 +90,6 @@ export const RadioStyle = styled.div`
 `;
 
 export const CheckboxStyle = styled.div`
-	font-family: 'Inter', sans-serif;
 	width: 120%;
 	margin-top: 5%;
 	line-height: 30px;

@@ -125,11 +125,9 @@ const SignUpContainer = () => {
 												Just Browsing
 											</Radio>
 
-											<Col>
-												<Radio value={2} className={'mt-2'}>
-													Waiting to Start Internship
-												</Radio>
-											</Col>
+											<Radio value={2} className={'mt-2'}>
+												Waiting to Start Internship
+											</Radio>
 										</RadioStyle>
 									</Radio.Group>
 
@@ -137,14 +135,10 @@ const SignUpContainer = () => {
 										<CheckboxStyle>
 											<RadioTitle>I am...</RadioTitle>
 
-											<Col>
-												<Checkbox value="A">Looking for Listings</Checkbox>
-											</Col>
-											<Col span={20}>
-												<Checkbox value="B">
-													Putting Property for Listings
-												</Checkbox>
-											</Col>
+											<Checkbox value="A">Looking for Listings</Checkbox>
+											<Checkbox value="B">
+												Putting Property for Listings
+											</Checkbox>
 										</CheckboxStyle>
 									</Checkbox.Group>
 								</Col>
