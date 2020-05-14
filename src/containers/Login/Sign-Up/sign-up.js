@@ -194,7 +194,8 @@ const SignUpContainer = () => {
 										},
 									]}>
 									<Checkbox style={{ marginLeft: '15px' }}>
-										I Accept the <a href="">Terms of Use & Private Policies</a>
+										I Accept the <a href="">Terms of Use </a>&{' '}
+										<a href="">Private Policies</a>
 									</Checkbox>
 								</Form.Item>
 
