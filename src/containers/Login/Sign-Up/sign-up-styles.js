@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Button } from 'antd';
 import BGImage from '../../../assets/svg/Login/Sign-In/Background.png';
 
 export const Container = styled.div`
@@ -15,15 +16,23 @@ export const Container = styled.div`
 	}
 `;
 
+export const RowStyle = styled.div`
+	margin-left: 5%;
+	width: 75%;
+`;
+
 export const Title = styled.p`
 	display: block;
 	margin-top: 5%;
+	margin-left: 1.5%;
 	font-size: 35px;
-	margin-bottom: 7%;
 	color: rgba(0, 0, 0, 0.85);
 	font-family: 'Inter', sans-serif;
 	font-style: normal;
 	font-weight: normal;
+	@media (max-width: 500px) {
+		margin-left: 0.5%;
+	}
 `;
 
 export const Subtitle = styled.p`
@@ -53,29 +62,60 @@ export const Policy = styled.p`
 export const SignUp = styled.div`
 	font-family: 'Inter', sans-serif;
 
-	@media (max-width: 570px) {
-		margin-right: -100%;
-	}
 	@media (max-width: 500px) {
-		margin-right: -120%;
+		margin-left: -40%;
 	}
 `;
 
 export const SignIn = styled.a`
 	font-family: 'Inter', sans-serif;
 	font-size: 12px;
+	@media (max-width: 500px) {
+		margin-left: -40%;
+	}
 `;
 
 export const RadioStyle = styled.div`
 	font-family: 'Inter', sans-serif;
 	font-size: 14px;
+	margin-left: 35%;
+
+	@media (max-width: 767px) {
+		margin-top: -60%;
+		margin-bottom: 10%;
+		margin-left: 1%;
+	}
+	@media (max-width: 655px) {
+		margin-left: 2%;
+	}
+
+	@media (max-width: 650px) {
+		margin-bottom: 20%;
+		margin-left: -2%;
+	}
 `;
 
 export const CheckboxStyle = styled.div`
 	font-family: 'Inter', sans-serif;
-	font-size: 14px;
-	@media (max-width: 500px) {
+	width: 120%;
+	margin-top: 5%;
+	line-height: 30px;
+	margin-left: 35%;
+
+	@media (max-width: 767px) {
 		margin-bottom: 10%;
+	}
+
+	@media (max-width: 700px) {
+		margin-left: 1%;
+	}
+
+	@media (max-width: 650px) {
+		margin-bottom: 20%;
+	}
+
+	@media (max-width: 500px) {
+		margin-left: -1%;
 	}
 `;
 
@@ -103,8 +143,8 @@ export const Background = styled.div`
 export const HeroImg = styled.img`
 	position: absolute;
 	margin: auto;
-	width: 54.5vh;
-	left: 63%;
+	width: 51.5vh;
+	left: 57%;
 	top: 79%;
 
 	@media (max-width: 2500px) {
@@ -133,7 +173,39 @@ export const HeroImg = styled.img`
 
 	@media (max-width: 500px) {
 		left: 40%;
-		top: 90%;
-		width: 450px;
+		top: 87.66%;
+		width: 430px;
+	}
+`;
+
+export const RadioTitle = styled.p`
+	margin-bottom: -1%;
+	font-size: 12px;
+`;
+
+export const PolicyStyle = styled.p`
+	@media (max-width: 767px) {
+		margin-bottom: 10%;
+		margin-left: -10%;
+	}
+
+	@media (max-width: 700px) {
+		margin-bottom: 10%;
+		margin-left: -11%;
+	}
+
+	@media (max-width: 500px) {
+		margin-left: -15%;
+	}
+`;
+export const StyledButton = styled(Button)`
+	min-width: 110px;
+	border-radius: 5px;
+	@media (max-width: 767px) {
+		margin-left: -30%;
+	}
+
+	@media (max-width: 500px) {
+		margin-left: -5%;
 	}
 `;
