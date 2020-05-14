@@ -61,7 +61,7 @@ const SignUpContainer = () => {
 									rules={[
 										{
 											required: true,
-											message: 'Please input your Username!',
+											message: 'Please input your Username',
 										},
 									]}>
 									<Input placeholder="Enter Username" />
@@ -73,11 +73,11 @@ const SignUpContainer = () => {
 									rules={[
 										{
 											type: 'email',
-											message: 'The input is not a valid E-mail!',
+											message: 'The input is not a valid E-mail',
 										},
 										{
 											required: true,
-											message: 'Please input your E-mail!',
+											message: 'Please input your E-mail',
 										},
 									]}>
 									<Input placeholder="Enter Email" />
@@ -89,7 +89,7 @@ const SignUpContainer = () => {
 									rules={[
 										{
 											required: true,
-											message: 'Please input your password!',
+											message: 'Please input your password',
 										},
 									]}
 									hasFeedback>
@@ -104,7 +104,7 @@ const SignUpContainer = () => {
 									rules={[
 										{
 											required: true,
-											message: 'Please confirm your password!',
+											message: 'Please confirm your password',
 										},
 										({ getFieldValue }) => ({
 											validator(value) {
@@ -112,7 +112,7 @@ const SignUpContainer = () => {
 													return Promise.resolve();
 												}
 												return Promise.reject(
-													'The two passwords that you entered do not match!'
+													'The two passwords that you entered do not match'
 												);
 											},
 										}),
