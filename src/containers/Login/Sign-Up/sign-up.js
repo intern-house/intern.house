@@ -44,8 +44,6 @@ const SignUpContainer = () => {
 			<Background></Background>
 			<Container>
 				<Card>
-					<Logo src={MainLogo} style={{ width: '35px' }} />
-
 					<Form
 						form={form}
 						name="register"
