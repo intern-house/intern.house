@@ -21,6 +21,10 @@ import {
 	CheckboxStyle,
 	Background,
 	HeroImg,
+	RowStyle,
+	RadioTitle,
+	PolicyStyle,
+	StyledButton,
 } from './sign-up-styles';
 
 import { Link } from 'react-router-dom';
@@ -50,138 +54,115 @@ const SignUpContainer = () => {
 						name="register"
 						onFinish={onFinish}
 						layout={'vertical'}>
-						<Row style={{ marginLeft: '5%', width: '75%' }}>
-							<Col xs={24} md={12} className={'p-xs-1 p-md-3'}>
+						<RowStyle>
+							<Row>
 								<Title>Sign Up</Title>
-
-								<Form.Item
-									name="Username"
-									label="Username"
-									rules={[
-										{
-											required: true,
-											message: 'Please input your Username',
-										},
-									]}>
-									<Input placeholder="Enter Username" />
-								</Form.Item>
-
-								<Form.Item
-									name="Email"
-									label="Email"
-									rules={[
-										{
-											type: 'email',
-											message: 'The input is not a valid E-mail',
-										},
-										{
-											required: true,
-											message: 'Please input your E-mail',
-										},
-									]}>
-									<Input placeholder="Enter Email" />
-								</Form.Item>
-
-								<Form.Item
-									name="password"
-									label="Password"
-									rules={[
-										{
-											required: true,
-											message: 'Please input your password',
-										},
-									]}
-									hasFeedback>
-									<Input.Password placeholder="Enter Password" />
-								</Form.Item>
-
-								<Form.Item
-									name="confirm"
-									label="Confirm Password"
-									dependencies={['password']}
-									hasFeedback
-									rules={[
-										{
-											required: true,
-											message: 'Please confirm your password',
-										},
-										({ getFieldValue }) => ({
-											validator(value) {
-												if (!value || getFieldValue('password') === value) {
-													return Promise.resolve();
-												}
-												return Promise.reject(
-													'The two passwords that you entered do not match'
-												);
+							</Row>
+							<Row>
+								<Col xs={24} md={12} className={'p-xs-1 p-md-3'}>
+									<Form.Item
+										name="Username"
+										label="Username"
+										rules={[
+											{
+												required: true,
+												message: 'Please input your Username',
 											},
-										}),
-									]}>
-									<Input.Password placeholder="Confirm Password" />
-								</Form.Item>
-							</Col>
+										]}>
+										<Input placeholder="Enter Username" />
+									</Form.Item>
 
-							<Col
-								xs={24}
-								md={12}
-								style={{
-									marginTop: '18%',
-								}}>
-								<Radio.Group
-									onChange={handleChange}
-									value={value}
-									style={{ marginLeft: '20%' }}>
-									<RadioStyle>
-										<p
-											style={{
-												marginBottom: '-1%',
-												fontSize: '12px',
-											}}>
-											I am...
-										</p>
+									<Form.Item
+										name="Email"
+										label="Email"
+										rules={[
+											{
+												type: 'email',
+												message: 'The input is not a valid E-mail',
+											},
+											{
+												required: true,
+												message: 'Please input your E-mail',
+											},
+										]}>
+										<Input placeholder="Enter Email" />
+									</Form.Item>
 
-										<Radio value={1} style={{ marginTop: '4%' }}>
-											Just Browsing
-										</Radio>
+									<Form.Item
+										name="password"
+										label="Password"
+										rules={[
+											{
+												required: true,
+												message: 'Please input your password',
+											},
+										]}
+										hasFeedback>
+										<Input.Password placeholder="Enter Password" />
+									</Form.Item>
 
-										<Col>
-											<Radio value={2} style={{ marginTop: '4%' }}>
-												Waiting to Start Internship
+									<Form.Item
+										name="confirm"
+										label="Confirm Password"
+										dependencies={['password']}
+										hasFeedback
+										rules={[
+											{
+												required: true,
+												message: 'Please confirm your password',
+											},
+											({ getFieldValue }) => ({
+												validator(value) {
+													if (!value || getFieldValue('password') === value) {
+														return Promise.resolve();
+													}
+													return Promise.reject(
+														'The two passwords that you entered do not match'
+													);
+												},
+											}),
+										]}>
+										<Input.Password placeholder="Confirm Password" />
+									</Form.Item>
+								</Col>
+
+								<Col xs={24} md={12} className={'mt-5'}>
+									<Radio.Group onChange={handleChange} value={value}>
+										<RadioStyle>
+											<RadioTitle>I am...</RadioTitle>
+
+											<Radio value={1} className={'mt-2'}>
+												Just Browsing
 											</Radio>
-										</Col>
-									</RadioStyle>
-								</Radio.Group>
 
-								<Checkbox.Group
-									style={{
-										width: '80%',
-										marginTop: '5%',
-										lineHeight: '30px',
-										marginLeft: '20%',
-									}}>
-									<CheckboxStyle>
-										<p
-											style={{
-												marginBottom: '-0.5%',
-												fontSize: '12px',
-											}}>
-											I am...
-										</p>
+											<Col>
+												<Radio value={2} className={'mt-2'}>
+													Waiting to Start Internship
+												</Radio>
+											</Col>
+										</RadioStyle>
+									</Radio.Group>
 
-										<Col>
-											<Checkbox value="A">Looking for Listings</Checkbox>
-										</Col>
-										<Col span={20}>
-											<Checkbox value="B">
-												Putting Property for Listings
-											</Checkbox>
-										</Col>
-									</CheckboxStyle>
-								</Checkbox.Group>
-							</Col>
+									<Checkbox.Group>
+										<CheckboxStyle>
+											<RadioTitle>I am...</RadioTitle>
 
-							<HeroImg src={HeroImage}></HeroImg>
-						</Row>
-						<Row style={{ marginLeft: '5%' }}>
+											<Col>
+												<Checkbox value="A">Looking for Listings</Checkbox>
+											</Col>
+											<Col span={20}>
+												<Checkbox value="B">
+													Putting Property for Listings
+												</Checkbox>
+											</Col>
+										</CheckboxStyle>
+									</Checkbox.Group>
+								</Col>
+
+								<HeroImg src={HeroImage}></HeroImg>
+							</Row>
+						</RowStyle>
+						<Row className={'ml-5'}>
 							<Col>
 								<Form.Item
 									name="agreement"
@@ -194,21 +175,20 @@ const SignUpContainer = () => {
 													: Promise.reject(' Please Accept Agreement'),
 										},
 									]}>
-									<Checkbox style={{ marginLeft: '15px' }}>
-										I Accept the <a href="">Terms of Use </a>&{' '}
-										<a href="">Private Policies</a>
-									</Checkbox>
+									<PolicyStyle>
+										<Checkbox className={'ml-3'}>
+											I Accept the <a href="">Terms of Use </a>&{' '}
+											<a href="">Private Policies</a>
+										</Checkbox>
+									</PolicyStyle>
 								</Form.Item>
 
-								<Space size={24} style={{ marginLeft: '15px' }}>
+								<Space size={24} className={'ml-3'}>
 									<Form.Item>
 										<SignUp>
-											<Button
-												type="primary"
-												htmlType="submit"
-												style={{ borderRadius: '5px', width: '130px' }}>
+											<StyledButton type="primary" htmlType="submit">
 												Sign Up
-											</Button>
+											</StyledButton>
 										</SignUp>
 									</Form.Item>
 
