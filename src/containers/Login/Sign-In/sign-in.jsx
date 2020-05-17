@@ -81,7 +81,7 @@ const SignInContainer = () => {
 								</Form.Item>
 
 								<Form.Item>
-									<Link to="/forget-password">
+									<Link to="/signup">
 										<StyledButton type="secondary" htmlType="button">
 											Sign Up
 										</StyledButton>
