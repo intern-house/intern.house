@@ -1,12 +1,5 @@
-import React from 'react';
-import { Container } from './styles';
-
-import SignUpContainer from './Sign-Up';
-
 import SignInContainer from './Sign-In';
-
-const ForgetPasswordContainer = () => {
-	return <Container>Forget Password</Container>;
-};
+import SignUpContainer from './Sign-Up';
+import ForgetPasswordContainer from './Forgot-Password';
 
 export { SignUpContainer, SignInContainer, ForgetPasswordContainer };
