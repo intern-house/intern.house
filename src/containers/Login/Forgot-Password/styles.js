@@ -18,9 +18,6 @@ export const Image = styled.img`
 	display: block;
 	margin: auto;
 	padding: 5%;
-	@media (max-width: 1000px) {
-		width: 100%;
-	}
 `;
 
 export const Background = styled.div`
