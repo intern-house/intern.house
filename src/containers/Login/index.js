@@ -9,5 +9,4 @@ const SignUpContainer = () => {
 	return <Container>Sign Up</Container>;
 };
 
-
 export { SignUpContainer, SignInContainer, ForgetPasswordContainer };
