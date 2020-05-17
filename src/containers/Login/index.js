@@ -1,5 +1,3 @@
-import React from 'react';
-
 import SignInContainer from './Sign-In';
 import SignUpContainer from './Sign-Up';
 import ForgetPasswordContainer from './Forgot-Password';
