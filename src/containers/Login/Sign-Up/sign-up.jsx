@@ -153,8 +153,9 @@ const SignUpContainer = () => {
 								]}
 								className={'mb-0 mt-3'}>
 								<Checkbox>
-									I Accept the <a href="">Terms of Use </a>&{' '}
-									<a href="">Private Policies</a>
+									I Accept the{' '}
+									<a href="https://intern.house/terms">Terms of Use </a>&{' '}
+									<a href="https://intern.house/privacy">Private Policies</a>
 								</Checkbox>
 							</Form.Item>
 
