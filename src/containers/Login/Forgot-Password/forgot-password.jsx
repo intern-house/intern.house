@@ -36,7 +36,7 @@ const ForgetPasswordContainer = () => {
 								rules={[
 									{
 										type: 'email',
-										message: 'The input is not a valid E-mail',
+										message: 'Please use a valid email',
 									},
 									{
 										required: true,
@@ -47,7 +47,7 @@ const ForgetPasswordContainer = () => {
 							</Form.Item>
 
 							<Form.Item>
-								<Button type="primary" htmlType="submit">
+								<Button type="primary" htmlType="submit" className={'mt-3'}>
 									Reset my password
 								</Button>
 							</Form.Item>
