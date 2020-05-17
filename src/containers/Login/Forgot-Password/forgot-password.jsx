@@ -1,6 +1,6 @@
 import React from 'react';
 import { Row, Col, Typography, Form, Input, Button } from 'antd';
-import { Container, Background, Image } from './forgot-styles';
+import { Container, Background, Image } from './styles';
 import { Link } from 'react-router-dom';
 import passwordGraphic from '../../../assets/svg/Login/Forgot-Password/forgotPasswordGraphic.svg';
 
@@ -8,20 +8,6 @@ const { Title } = Typography;
 
 const ForgetPasswordContainer = () => {
 	const layout = {
-		labelCol: {
-			span: 0,
-		},
-		wrapperCol: {
-			span: 16,
-		},
-		position: 'absolute',
-		width: '309px',
-		height: '52px',
-		left: '330px',
-		top: '489px',
-	};
-
-	const tailLayout = {
 		wrapperCol: {
 			span: 16,
 		},
@@ -32,7 +18,7 @@ const ForgetPasswordContainer = () => {
 			<Background></Background>
 			<Container className={'p-5'}>
 				<Row justify={'center'}>
-					<Col xs={24} md={8} className={'p-xs-1 p-md-3'}>
+					<Col md={24} lg={12} className={'p-xs-1 p-md-3'}>
 						<Title className={'mb-5'}>Forgot Password</Title>
 						<Form
 							name="basic"
@@ -49,6 +35,10 @@ const ForgetPasswordContainer = () => {
 								name="email"
 								rules={[
 									{
+										type: 'email',
+										message: 'The input is not a valid E-mail',
+									},
+									{
 										required: true,
 										message: 'Please enter an email address',
 									},
@@ -56,7 +46,7 @@ const ForgetPasswordContainer = () => {
 								<Input placeholder="Enter your email" />
 							</Form.Item>
 
-							<Form.Item {...tailLayout}>
+							<Form.Item>
 								<Button type="primary" htmlType="submit">
 									Reset my password
 								</Button>
@@ -67,7 +57,7 @@ const ForgetPasswordContainer = () => {
 							</Form.Item>
 						</Form>
 					</Col>
-					<Col xs={0} md={12}>
+					<Col xs={0} md={0} lg={12}>
 						<Image src={passwordGraphic} />
 					</Col>
 				</Row>
