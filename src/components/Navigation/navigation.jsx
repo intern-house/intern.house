@@ -15,7 +15,9 @@ export const NavAuthed = () => {
 	return (
 		<StyledMenu>
 			<VerticalAlign style={{ marginRight: 'auto' }}>
-				<Link to="/"></Link>
+				<Link to="/">
+					<Logo src={LogoImg} />
+				</Link>
 			</VerticalAlign>
 
 			<Menu mode="horizontal">
@@ -42,7 +44,9 @@ export const NavNotAuthed = () => {
 	return (
 		<StyledMenu>
 			<VerticalAlign style={{ marginRight: 'auto' }}>
-				<Link to="/">{/* <Logo src={LogoImg} /> */}</Link>
+				<Link to="/">
+					<Logo src={LogoImg} />
+				</Link>
 			</VerticalAlign>
 
 			<Menu mode="horizontal">
