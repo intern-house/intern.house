@@ -40,7 +40,7 @@ components/
     ├── [FolderNameInCaps]
     |       ├──[component-name.jsx]     # Component (Component name must be in lowercase kebab case.)
     |       ├──[index.js]               # Import/Export for the components
-    |       └──[styles.js]              # Styled components assets for the specific component (Must only be named as "styles")
+    |       └──[styles.js]              # Styled components assets for the specific component
     |   # Example
     ├── Login
     |       ├──Sign-Up
