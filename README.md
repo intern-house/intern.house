@@ -6,7 +6,7 @@ yarn
 yarn dev
 #or 
 npm install
-npm dev
+npm run dev
 ```
 
 
