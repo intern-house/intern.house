@@ -6,6 +6,7 @@ import ProgressBar from '../components/Progress-Bar';
 import 'antd/dist/antd.css';
 import '../styles/vars.css';
 import '../styles/spacer.min.css';
+import '../styles/container.min.css';
 import '../styles/index.css';
 
 MyApp.propTypes = {
