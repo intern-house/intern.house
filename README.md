@@ -1,14 +1,20 @@
 # React x Next.js Framework
 
 ## How to run the project
+
 ```
 yarn
 yarn dev
-#or 
+#or
 npm install
 npm run dev
+
+# For running BOTH Frontend and Backend
+npm install
+npm run both
 ```
 
+For running `npm run both`, make sure that the directory name matches the script directory names.
 
 ## Folder structure
 
@@ -16,7 +22,7 @@ npm run dev
 client/
     ├── .github                 # Github actions YAML files
     ├── .next                   # Next generation files
-    ├── components              # All components 
+    ├── components              # All components
     ├── node_modules
     ├── pages                   # All pages (routes) in the application
     ├── public                  # Any static content that needs to be served
@@ -24,7 +30,7 @@ client/
     ├── .babelrc                # Babel Settings
     ├── .eslintignore
     ├── .eslintrc.json
-    ├── .gitignore 
+    ├── .gitignore
     ├── .prettierignore
     ├── .prettierrc.json
     ├── .next.config.js         # Next.js settings
@@ -34,6 +40,7 @@ client/
 ```
 
 ## Naming / Directory Conventions
+
 ```sh
 # For components, files are to follow this structure
 components/
@@ -46,25 +53,27 @@ components/
     |       ├──Sign-Up
     |       |   ├──index.js
     |       |   ├──sign-up.jsx
-    |       |   └──styles.js   
+    |       |   └──styles.js
     |       └──Sign-In
     |           ├──index.js
     |           ├──sign-in.jsx
-    |           └──styles.js 
-    |    
+    |           └──styles.js
+    |
     └── [OtherComponents]
 ```
 
 #### Naming
-1. Components parent folders are always to be in ```Pascal-Kebab``` format
-2. The components itself, will be in ```lowercase-kebab``` format
+
+1. Components parent folders are always to be in `Pascal-Kebab` format
+2. The components itself, will be in `lowercase-kebab` format
 3. The "styles.js" file must only be named as exactly that.
 
-
 ## Linter
+
 For our application, we have a main linter (eslint) and a code formatter (prettier). The configuration for both are included into the development files already. If you are using VScode, it should piroritize those files over your existing settings. If you are using a different editor, please check if it is linting properly.
 
 #### How to run the linters
+
 ```sh
 # eslint
 npx eslint ./
@@ -75,6 +84,7 @@ npx prettier ./pages
 ```
 
 ## Contributing
+
 1. Ensure any install or build dependencies are removed before the end of the layer when doing a build.
 2. Update the README.md with details of changes to the interface, this includes new environment variables, exposed ports, useful file locations and container parameters.
 3. You may merge the Pull Request in once you have the sign-off of two other developers, or if you do not have permission to do that, you may request the second reviewer to merge it for you.

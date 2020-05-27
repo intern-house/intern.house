@@ -1,8 +1,9 @@
 import Layout from '../components/Layout';
+import LandingContainer from '../components/Home';
 
 const Index = () => (
 	<Layout title={'Home'}>
-		<p>Hello</p>
+		<LandingContainer />
 	</Layout>
 );
 
