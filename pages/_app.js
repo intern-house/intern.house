@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ProgressBar from '../components/Progress-Bar';
 
 // STYLESHEETS
 import 'antd/dist/antd.css';
@@ -13,5 +14,10 @@ MyApp.propTypes = {
 };
 
 export default function MyApp({ Component, pageProps }) {
-	return <Component {...pageProps} />;
+	return (
+		<>
+			<ProgressBar />
+			<Component {...pageProps} />
+		</>
+	);
 }
