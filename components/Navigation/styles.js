@@ -1,5 +1,10 @@
 import styled from 'styled-components';
-import { Menu, Avatar } from 'antd';
+import { Menu, Avatar, Row } from 'antd';
+
+export const StyledRow = styled(Row)`
+	box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.25);
+	background-color: ${props => (props.darkmode ? '#001529' : 'white')};
+`;
 
 export const Logo = styled.div`
 	display: block;
@@ -29,10 +34,6 @@ export const Logo = styled.div`
 export const StyledMenu = styled.nav`
 	display: flex;
 	justify-content: flex-end;
-	padding: 0 50px;
-	box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.25);
-
-	background-color: ${props => (props.darkmode ? '#001529' : 'white')};
 `;
 
 export const StyledMenuItem = styled(Menu.Item)`
