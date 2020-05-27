@@ -2,7 +2,7 @@
 
 ## How to run the project
 
-```
+```sh
 yarn
 yarn dev
 #or
@@ -14,7 +14,7 @@ npm install
 npm run both
 ```
 
-For running `npm run both`, make sure that the directory name matches the script directory names.
+For running `npm run both`, make sure that the directory name matches the script directory names. Both directories must be at the same level.
 
 ## Folder structure
 
