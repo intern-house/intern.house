@@ -1,5 +1,16 @@
 :root {
+	/* Company Colors */
+	--bluePrimary: #2281e4;
+	--blueDark: #355c7d;
+	--blueAlt: #84c1ff;
+	--blueLight: #add6ff;
+	--blueLightAlt: #d6eaff;
+
+	/* Backgrounds */
 	--backgroundColor: #f7f7f7;
-	--primaryColor: #191a1b;
+	--backgroundColorAlt: #f6fbff;
+
+	/* Text colors */
+	--textColorPrimary: #4a4a4a;
 	--textColorSecondary: rgba(0, 0, 0, 0.45);
 }
