@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Router from 'next/router';
 import Link from 'next/link';
 
-import { Row, Col, Space, Typography, Form, Input, Checkbox } from 'antd';
+import {
+	Row,
+	Col,
+	Space,
+	Typography,
+	Form,
+	Input,
+	Checkbox,
+	Alert,
+} from 'antd';
+
 import {
 	Container,
 	StyledButton,
@@ -10,15 +21,28 @@ import {
 	Background,
 } from './styles';
 
+const axios = require('axios');
+
 const { Title } = Typography;
 
 function SignInContainer() {
 	const [form] = Form.useForm();
+	const [message, setMessage] = useState();
 
 	const onFinish = values => {
-		console.log('Success:', values);
-		alert('Logged in.');
-		// TODO: Add API endpoint.
+		axios
+			.post('http://localhost:5000/auth/signin', {
+				email: values.email,
+				password: values.password,
+			})
+			.then(res => {
+				if (res.data.code != 200) {
+					setMessage('Sorry! The user does not exists.');
+				} else {
+					localStorage.setItem('rememberMe', values.remember);
+					Router.push('/');
+				}
+			});
 	};
 
 	return (
@@ -31,27 +55,37 @@ function SignInContainer() {
 					</Col>
 
 					<Col xs={24} md={12} className={'p-xs-1 p-md-3'}>
-						<Title className={'mb-5'}>Sign in</Title>
+						<Title>Sign in</Title>
+
+						{message && (
+							<Alert
+								type={'error'}
+								message={message}
+								className={'mb-3'}
+								banner
+								showIcon={false}
+							/>
+						)}
 
 						<Form layout={'vertical'} form={form} onFinish={onFinish}>
 							<Form.Item
-								name="Username"
-								label="Username"
+								name="email"
+								label="Email"
 								rules={[
 									{
 										required: true,
-										message: 'Please enter your username',
+										message: 'Please enter your email',
+										type: 'email',
 									},
 								]}>
-								<Input placeholder="Enter your username" />
+								<Input placeholder="Enter your email" />
 							</Form.Item>
 							<Form.Item
-								name="Password"
+								name="password"
 								label="Password"
 								rules={[
 									{
 										required: true,
-										message: 'Please enter your password',
 									},
 								]}>
 								<Input.Password />
