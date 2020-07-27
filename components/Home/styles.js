@@ -2,7 +2,15 @@ import styled from 'styled-components';
 
 export const Background = styled.div`
 	background-color: #f6fbff;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
 	height: 100vh;
+	width: 100vw;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 `;
 
 // To show a white box behind container

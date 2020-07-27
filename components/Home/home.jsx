@@ -19,13 +19,17 @@ function HomeContainer() {
 
 	return (
 		<>
+			<Background></Background>
 			<Container className={'p-4'}>
 				<Row>
 					<Col md={24} lg={12} className={'p-xs-1 p-md-3'}>
 						<Title
-							style={{ fontWeight: 'bold', fontSize: '50px' }}
+							style={{
+								fontWeight: 'bold',
+								fontSize: '50px',
+							}}
 							className={'mb-5 mt-5'}>
-							Connect within your industry the right way with no hassle.{' '}
+							Connect within your industry the right way with no hassle.
 						</Title>
 						<Title className={'mb-4'} level={4}>
 							Collated housing listings and industry knowledge all in one.
