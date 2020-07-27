@@ -21,7 +21,7 @@ function ForgetPasswordContainer() {
 			<Container className={'p-5'}>
 				<Row justify={'center'}>
 					<Col md={24} lg={12} className={'p-xs-1 p-md-3'}>
-						<Title className={'mb-5'}>Forget Password</Title>
+						<Title className={'mb-5'}>Forgot Password</Title>
 						<Form layout={'vertical'} form={form} onFinish={onFinish}>
 							<p>
 								Thats fine! We will send you an email to reset your password.
