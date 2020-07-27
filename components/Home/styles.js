@@ -22,7 +22,7 @@ export const Container = styled.div`
 export const HeroImg = styled.img`
 	display: block;
 	margin: auto;
-	padding-left: 25%;
+	margin-left: 25%;
 
 	@media (max-width: 1000px) {
 		width: 100%;

@@ -41,8 +41,8 @@ function HomeContainer() {
 						</Title>
 					</Col>
 
-					<Col xs={0} lg={12}>
-						<HeroImg src={'/svg/Login/Sign-In/Hero.svg'} />
+					<Col xs={0} lg={12} className={'mt-5'}>
+						<HeroImg src={'/svg/Landing/Hero-Images/people_SVG.svg'} />
 					</Col>
 				</Row>
 			</Container>
