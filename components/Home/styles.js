@@ -15,8 +15,10 @@ export const Background = styled.div`
 //	box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.25);
 export const Container = styled.div`
 	position: relative;
-	width: 1200px;
+	width: 1300px;
 	margin: 10vh auto 2vh;
+	background-color: white;
+	box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.25);
 
 	@media (max-width: 1200px) {
 		margin: 3.5vh auto 2vh;
@@ -52,4 +54,10 @@ export const Card = styled.div`
 		width: 85vw;
 		height: 200px;
 	}
+`;
+
+export const IconContainer = styled.div`
+	poistion: relative;
+	column-gap: 50px;
+	width: 400px;
 `;
