@@ -66,26 +66,32 @@ function HomeContainer() {
 				<Row>
 					<Col span={8}>
 						<CardView
-							title="Property Listings"
-							imgUrl="/svg/Landing/Hero-Images/people_SVG.svg"
+							title="Property Listings."
+							imgUrl="/svg/Landing/Card-Images/Map_SVG.svg"
 							description="We collate housing properties over multiple websites, allowing you to compare easily."
 						/>
 					</Col>
                     <Col span={8}>
 						<CardView
-							title="Property Listings"
-							imgUrl="/svg/Landing/Hero-Images/people_SVG.svg"
-							description="We collate housing properties over multiple websites, allowing you to compare easily."
+							title="Jobs Jobs Jobs!"
+							imgUrl="/svg/Landing/Card-Images/Search_SVG.svg"
+							description="Our large collection of job are being constantly updated with the newest openings, for all industries."
 						/>
 					</Col>
                     <Col span={8}>
 						<CardView
-							title="Property Listings"
-							imgUrl="/svg/Landing/Hero-Images/people_SVG.svg"
-							description="We collate housing properties over multiple websites, allowing you to compare easily."
+							title="Connect with others."
+							imgUrl="/svg/Landing/Card-Images/Creative_process_SVG.svg"
+							description="Find new roomates and make new connections in your industry with our networking solution."
 						/>
 					</Col>
+         
 				</Row>
+                <Row justify="center" className={'mt-3'}>
+                    <p style={{fontSize: "20px"}}>Get Started</p>
+                    <Button type={'primary'} className={'ml-5'}>Sign Up</Button>
+                </Row>
+                
 			</Container>
 		</>
 	);
