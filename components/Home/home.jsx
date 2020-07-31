@@ -70,9 +70,23 @@ function HomeContainer() {
 					</CardSectionText>
 			
 					<CardContainer>
-						<CardView/>
-						<CardView/>
-						<CardView/>
+					<CardView
+							title="Property Listings."
+							imgUrl="/svg/Landing/Card-Images/Map_SVG.svg"
+							description="We collate housing properties over multiple websites, allowing you to compare easily."
+						/>
+
+						<CardView
+							title="Jobs Jobs Jobs!"
+							imgUrl="/svg/Landing/Card-Images/Search_SVG.svg"
+							description="Our large collection of job are being constantly updated with the newest openings, for all industries."
+						/>
+
+						<CardView
+							title="Connect with others."
+							imgUrl="/svg/Landing/Card-Images/Creative_process_SVG.svg"
+							description="Find new roomates and make new connections in your industry with our networking solution."
+						/>
 					</CardContainer>
 					
 					<Row justify="center" className={'mt-3'}>

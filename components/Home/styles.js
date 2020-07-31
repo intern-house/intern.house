@@ -59,7 +59,7 @@ export const CardContainer = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin-bottom: 72px;
+
 `;
 
 export const GridContainer = styled.div`
@@ -73,10 +73,7 @@ export const GridContainer = styled.div`
 	background-color: white;
 	box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.25);
 
-	@media (max-width: 1000px) {
-		grid-template-columns: repeat(1, 1fr);
-	}
-	
+
 `;
 
 export const HeroImg = styled.img`
@@ -91,7 +88,7 @@ export const HeroImg = styled.img`
 // https://travishorn.com/responsive-grid-in-2-minutes-with-css-grid-layout-4842a41420fe
 export const Card = styled.div`
 
-	display: flex;
+	display: grid;
 	flex-basis: 350px;
 	height: 575px;
 	margin: 3.5vh auto 2vh;
@@ -101,11 +98,20 @@ export const Card = styled.div`
 	
 	@media (max-width: 1300px) {
 		flex-basis: 300px;
+
 	}
 
 	@media (max-width: 1150px) {
 		flex-basis: 85vw;
 		height: 300px;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@media (max-width: 600px) {
+		flex-basis: 95vw;
+		height: 450px;
+		grid-template-columns: repeat(1, 1fr);
+		padding: 20px;
 	}
 `;
 
@@ -138,7 +144,7 @@ export const StatesContainerSmall = styled.div`
 	z-index: 0;
 	width: 500px;
 	margin: 2vw;
-	background-image: / svg/Landing/Hero-Images/City_SVG.svg;
+	background-image: /svg/Landing/Hero-Images/City_SVG.svg;
 `;
 
 export const CityContainer = styled.img`
@@ -146,4 +152,22 @@ export const CityContainer = styled.img`
 	z-index: -3;
 	width: 85%;
 	opacity: 70%;
+`;
+
+export const CardImgContainer = styled.div`
+	
+	display: flex;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	
+`;
+
+export const CardTxtContainer = styled.div`
+	
+
+	width: 100%;
+	height: 100%;
+
+
 `;
