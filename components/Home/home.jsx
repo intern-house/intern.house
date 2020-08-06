@@ -13,9 +13,11 @@ import {
 	CityContainer,
 	LandingText,
 	CardSectionText,
-	GridContainer,
-	CardContainer
-
+	CardContainer,
+	BigTextGridContainer,
+	SmallStateText,
+	HeroImgLeft,
+	ButtonContainer
 } from './styles';
 
 import { Row, Col, Typography, Form, Input, Button } from 'antd';
@@ -68,9 +70,9 @@ function HomeContainer() {
 					<CardSectionText className={'mt-5 mb-5'}>
 						Built to help start your career on the right foot.
 					</CardSectionText>
-			
+
 					<CardContainer>
-					<CardView
+						<CardView
 							title="Property Listings."
 							imgUrl="/svg/Landing/Card-Images/Map_SVG.svg"
 							description="We collate housing properties over multiple websites, allowing you to compare easily."
@@ -88,44 +90,81 @@ function HomeContainer() {
 							description="Find new roomates and make new connections in your industry with our networking solution."
 						/>
 					</CardContainer>
-					
+
 					<Row justify="center" className={'mt-3'}>
-						<p style={{ fontSize: '20px' }}>Get Started</p>
 						<Button
 							type={'primary'}
-							className={'ml-5'}
+							size={'large'}
+							className={'mt-3'}
 							style={{ borderRadius: '10px' }}>
-							Sign Up
+							Sign up and get started!
 						</Button>
 					</Row>
 				</Container>
 
-				<Container style={{ marginBottom: '25vh' }}>
+				<Container className={'p-3'} style={{ marginBottom: '25vh' }}>
 					<Row>
-						<Col flex={3}>
-							{/* make container*/}
-							<StateText>
-								Toronto Vancouver Montreal Waterloo Ottawa Calgary
-							</StateText>
+						<Col xs={0} md={0} lg={12} className={'p-xs-1 p-md-3'}>
+							<HeroImgLeft src="/svg/Landing/Hero-Images/City_SVG.svg" />
 						</Col>
-						<Col flex={9}>
-							<StatesContainerSmall className={'pt-1'}>
-								<Title
-									style={{
-										fontWeight: 'bold',
-										fontSize: '35px',
-										alignItems: 'center',
-									}}>
-									Curated content for multiple cities and growing.
-								</Title>
-								<p style={{ fontSize: '20px' }}>
-									Our property listings and job openings are constantly updated.
-								</p>
-								<Title level={4}>
-									<a href="#">Search through our collections.</a>
-								</Title>
-							</StatesContainerSmall>
-							<CityContainer src="/svg/Landing/Hero-Images/City_SVG.svg"></CityContainer>
+						<Col md={24} lg={12} className={'p-xs-1 p-md-3'}>
+							<LandingText
+								className={'mb-4 mt-3'}>
+								Curated content for multiple cities, and growing.
+							</LandingText>
+							<Title className={'mb-4'} level={4}>
+									Our property listings and job openings are constantly updated
+									with posts from sites like AirBnB, Zillow, Indeed, and many
+									more.
+							</Title>
+							<Title level={3}><a href="#">Search through our collections.</a></Title>
+							<ButtonContainer>
+							<Button
+								type={'primary'}
+								size={'large'}
+								style={{ borderRadius: '10px' }}
+								className={'mt-3'}>
+								Toronto
+							</Button>
+							<Button
+								type={'primary'}
+								size={'large'}
+								style={{ borderRadius: '10px' }}
+								className={'mt-3'}>
+								Vancouver
+							</Button>
+							<Button
+								type={'primary'}
+								size={'large'}
+								style={{ borderRadius: '10px' }}
+								className={'mt-3'}>
+								Waterloo
+							</Button>
+							<Button
+								type={'primary'}
+								size={'large'}
+								style={{ borderRadius: '10px' }}
+								className={'mt-3'}>
+								Ottawa
+							</Button>
+							<Button
+								type={'primary'}
+								size={'large'}
+								style={{ borderRadius: '10px' }}
+								className={'mt-3'}>
+								Montreal
+							</Button>
+							<Button
+								type={'primary'}
+								size={'large'}
+								style={{ borderRadius: '10px' }}
+								className={'mt-3'}>
+								London
+							</Button>
+						
+							</ButtonContainer>
+
+	
 						</Col>
 					</Row>
 				</Container>
@@ -158,6 +197,7 @@ function HomeContainer() {
 							</Title>
 							<Button
 								type={'primary'}
+								size={'large'}
 								style={{ borderRadius: '10px' }}
 								className={'mt-3'}>
 								Donate
@@ -173,7 +213,7 @@ function HomeContainer() {
 					<Row justify="center" style={{ textAlign: 'center' }}>
 						<Col>
 							<Title level={1} style={{ fontWeight: 'bold' }}>
-								Any questions? Send as an email or message us on social media.
+								Any questions? Send us an email or message us on social media.
 							</Title>
 							<Title level={3} style={{ fontWeight: 'normal' }}>
 								We don't bite, we promise!

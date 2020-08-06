@@ -8,7 +8,9 @@ export const Background = styled.div`
 	min-height: 100%;
 	width: 100%;
 	overflow: auto;
+	z-index: 50;
 `;
+
 
 export const LandingText = styled(Title)`
 	font-weight: bold;
@@ -44,36 +46,105 @@ export const CardSectionText = styled(Title)`
 //	box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.25);
 export const Container = styled.div`
 	position: relative;
-	width: 1300px;
+	width: 85vw;
 	margin: 10vh auto 2vh;
-
-	@media (max-width: 1200px) {
-		margin: 3.5vh auto 2vh;
-		width: 85vw;
-	}
-`;
-
-export const CardContainer = styled.div`
-
-	display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-
-`;
-
-export const GridContainer = styled.div`
-
-	width: 80vw;
-	margin: 0 auto;
-	display: flex;
-	flex-direction: row;
-	grid-gap: 1rem;
-	grid-template-columns: repeat(3, 1fr);
+	z-index: 1;
 	background-color: white;
 	box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.25);
 
+`;
 
+export const CardContainer = styled.div`
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+`;
+
+// https://travishorn.com/responsive-grid-in-2-minutes-with-css-grid-layout-4842a41420fe
+export const Card = styled.div`
+	display: grid;
+	flex-basis: 350px;
+	height: 575px;
+	margin: 3.5vh auto 2vh;
+	background-color: white;
+	box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+
+	@media (max-width: 1300px) {
+		flex-basis: 300px;
+	}
+
+	@media (max-width: 1150px) {
+		flex-basis: 85vw;
+		height: 300px;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@media (max-width: 600px) {
+		flex-basis: 95vw;
+		height: 475px;
+		grid-template-columns: repeat(1, 1fr);
+		padding: 20px;
+	}
+`;
+
+export const CardImgContainer = styled.div`
+	display: flex;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+`;
+
+export const CardTxtContainer = styled.div`
+	width: 100%;
+	height: 100%;
+`;
+
+export const BigTextGridContainer = styled.div`
+	display: grid;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	grid-template-columns: 1fr 2fr;
+
+	background-color: white;
+	box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.25);
+
+`;
+
+
+export const StateText = styled.div`
+
+	position: absolute;
+	height: 100%;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	font-size: 90px;
+	
+	
+	color: #355c7d;
+
+	@media (max-width: 1200px) {
+		line-height: 100px;
+	}
+`;
+
+export const SmallStateText = styled.div`
+	
+	width: 70%;
+`;
+
+export const StatesContainerSmall = styled.div`
+	position: relative;
+	z-index: -1;
+	background-image: url("/svg/Landing/Hero-Images/City_SVG.svg");
+	background-repeat: no-repeat;
+	opacity: 0.5;
+	width: 100%;
+	height: 100%;
 `;
 
 export const HeroImg = styled.img`
@@ -85,37 +156,14 @@ export const HeroImg = styled.img`
 	}
 `;
 
-// https://travishorn.com/responsive-grid-in-2-minutes-with-css-grid-layout-4842a41420fe
-export const Card = styled.div`
-
-	display: grid;
-	flex-basis: 350px;
-	height: 575px;
-	margin: 3.5vh auto 2vh;
-	background-color: white;
-	box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.25);
-	border-radius: 10px;
-	
-	@media (max-width: 1300px) {
-		flex-basis: 300px;
-
-	}
-
-	@media (max-width: 1150px) {
-		flex-basis: 85vw;
-		height: 300px;
-		grid-template-columns: repeat(2, 1fr);
-	}
-
-	@media (max-width: 600px) {
-		flex-basis: 95vw;
-		height: 450px;
-		grid-template-columns: repeat(1, 1fr);
-		padding: 20px;
+export const HeroImgLeft = styled.img`
+	display: block;
+	margin: auto;
+	align-items: center;
+	@media (max-width: 1000px) {
+		width: 100%;
 	}
 `;
-
-
 
 export const IconContainer = styled.div`
 	poistion: relative;
@@ -123,13 +171,18 @@ export const IconContainer = styled.div`
 	width: 400px;
 `;
 
-export const StateText = styled.h1`
-	word-spacing: unset;
-	display: table-caption;
-	font-weight: normal;
-	font-size: 110px;
-	line-height: 130px;
-	color: #355c7d;
+export const ButtonContainer = styled.div`
+
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	justify-content: space-around;
+	column-gap: 70px;
+	row-gap: 30px;
+
+	@media (max-width: 500px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
 `;
 
 //	@media (max-width: 1150px) {
@@ -139,35 +192,3 @@ export const StateText = styled.h1`
 
 // background-color: white;
 // box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.25);
-export const StatesContainerSmall = styled.div`
-	position: relative;
-	z-index: 0;
-	width: 500px;
-	margin: 2vw;
-	background-image: /svg/Landing/Hero-Images/City_SVG.svg;
-`;
-
-export const CityContainer = styled.img`
-	display: block;
-	z-index: -3;
-	width: 85%;
-	opacity: 70%;
-`;
-
-export const CardImgContainer = styled.div`
-	
-	display: flex;
-	width: 100%;
-	height: 100%;
-	justify-content: center;
-	
-`;
-
-export const CardTxtContainer = styled.div`
-	
-
-	width: 100%;
-	height: 100%;
-
-
-`;
