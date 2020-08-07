@@ -8,16 +8,11 @@ import {
 	Container,
 	HeroImg,
 	IconContainer,
-	StateText,
-	StatesContainerSmall,
-	CityContainer,
 	LandingText,
 	CardSectionText,
 	CardContainer,
-	BigTextGridContainer,
-	SmallStateText,
 	HeroImgLeft,
-	ButtonContainer
+	ButtonContainer,
 } from './styles';
 
 import { Row, Col, Typography, Form, Input, Button } from 'antd';
@@ -40,14 +35,15 @@ function HomeContainer() {
 	return (
 		<>
 			<Background>
-				<Container className={'p-3 '} style={{ marginBottom: '25vh' }}>
+				<Container className={'p-3'} style={{ marginBottom: '25vh' }}>
 					<Row>
-						<Col md={24} lg={12} className={'p-xs-1 p-md-3'}>
+						<Col md={24} lg={12} className={'p-xs-1 p-md-3 p-lg-5'}>
 							<LandingText>
-								Connect within your industry the right way with no hassle.
+								Connect within your industry the right way with ease.
 							</LandingText>
 							<Title className={'mb-4'} level={4}>
-								Collated housing listings and industry knowledge all in one.
+								Collated housing listings, internship openings, networking and
+								industry knowledge all in one.
 							</Title>
 							<Search
 								placeholder="Enter a location or address."
@@ -105,73 +101,71 @@ function HomeContainer() {
 				<Container className={'p-3'} style={{ marginBottom: '25vh' }}>
 					<Row>
 						<Col xs={0} md={0} lg={12} className={'p-xs-1 p-md-3'}>
-							<HeroImgLeft src="/svg/Landing/Hero-Images/City_SVG.svg" />
+							<HeroImgLeft className={'mt-5'} src="/svg/Landing/Hero-Images/City_SVG.svg" />
 						</Col>
 						<Col md={24} lg={12} className={'p-xs-1 p-md-3'}>
-							<LandingText
-								className={'mb-4 mt-3'}>
+							<LandingText className={'mb-4 mt-3'}>
 								Curated content for multiple cities, and growing.
 							</LandingText>
 							<Title className={'mb-4'} level={4}>
-									Our property listings and job openings are constantly updated
-									with posts from sites like AirBnB, Zillow, Indeed, and many
-									more.
+								Our property listings and job openings are constantly updated
+								with posts from sites like AirBnB, Zillow, Indeed, and many
+								more.
 							</Title>
-							<Title level={3}><a href="#">Search through our collections.</a></Title>
+							<Title level={3}>
+								<a href="#">Search through our collections.</a>
+							</Title>
 							<ButtonContainer>
-							<Button
-								type={'primary'}
-								size={'large'}
-								style={{ borderRadius: '10px' }}
-								className={'mt-3'}>
-								Toronto
-							</Button>
-							<Button
-								type={'primary'}
-								size={'large'}
-								style={{ borderRadius: '10px' }}
-								className={'mt-3'}>
-								Vancouver
-							</Button>
-							<Button
-								type={'primary'}
-								size={'large'}
-								style={{ borderRadius: '10px' }}
-								className={'mt-3'}>
-								Waterloo
-							</Button>
-							<Button
-								type={'primary'}
-								size={'large'}
-								style={{ borderRadius: '10px' }}
-								className={'mt-3'}>
-								Ottawa
-							</Button>
-							<Button
-								type={'primary'}
-								size={'large'}
-								style={{ borderRadius: '10px' }}
-								className={'mt-3'}>
-								Montreal
-							</Button>
-							<Button
-								type={'primary'}
-								size={'large'}
-								style={{ borderRadius: '10px' }}
-								className={'mt-3'}>
-								London
-							</Button>
-						
+								<Button
+									type={'primary'}
+									size={'large'}
+									style={{ borderRadius: '10px' }}
+									className={'mt-3'}>
+									Toronto
+								</Button>
+								<Button
+									type={'primary'}
+									size={'large'}
+									style={{ borderRadius: '10px' }}
+									className={'mt-3'}>
+									Vancouver
+								</Button>
+								<Button
+									type={'primary'}
+									size={'large'}
+									style={{ borderRadius: '10px' }}
+									className={'mt-3'}>
+									Waterloo
+								</Button>
+								<Button
+									type={'primary'}
+									size={'large'}
+									style={{ borderRadius: '10px' }}
+									className={'mt-3'}>
+									Ottawa
+								</Button>
+								<Button
+									type={'primary'}
+									size={'large'}
+									style={{ borderRadius: '10px' }}
+									className={'mt-3'}>
+									Montreal
+								</Button>
+								<Button
+									type={'primary'}
+									size={'large'}
+									style={{ borderRadius: '10px' }}
+									className={'mt-3'}>
+									London
+								</Button>
 							</ButtonContainer>
-
-	
 						</Col>
 					</Row>
 				</Container>
 
-				<Container className={'p-3'} style={{ marginBottom: '25vh' }}>
+				<Container style={{ marginBottom: '25vh' }}>
 					<Row>
-						<Col md={24} lg={12} className={'p-xs-1 p-md-3'}>
+						<Col md={24} lg={12} className={'p-xs-1 p-md-3 p-lg-5'}>
 							<Title
 								style={{
 									fontWeight: 'bold',
@@ -180,17 +174,16 @@ function HomeContainer() {
 								className={'mb-5 mt-3'}>
 								No Fees.
 							</Title>
-							<Title className={'mb-5'} level={4}>
+							<Title className={'mb-5'} style={{ fontSize: '30px' }}>
 								We want you to have the biggest advantage when entering the
 								market, this means that we provide this service completely free.
 							</Title>
-							<Title className={'mb-4'} level={3}>
+							<Title className={'mb-5'} style={{ fontSize: '30px' }}>
 								Donations
 							</Title>
 							<Title
 								className={'mb-4'}
-								style={{ fontWeight: 'normal' }}
-								level={4}>
+								style={{ fontWeight: 'lighter', fontSize: '25px' }}>
 								We still accept donations! Any donations recieved will go into
 								this website’s maintenence costs as well as buying our
 								developers some drinks!
@@ -203,7 +196,7 @@ function HomeContainer() {
 								Donate
 							</Button>
 						</Col>
-						<Col xs={0} md={0} lg={12} className={'p-xs-1 p-md-3'}>
+						<Col xs={0} md={0} lg={12} className={'mt-5 p-xs-1 p-md-3 p-lg-5'}>
 							<HeroImg src="/svg/Landing/Hero-Images/Investment_SVG.svg" />
 						</Col>
 					</Row>

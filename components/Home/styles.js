@@ -14,7 +14,7 @@ export const Background = styled.div`
 
 export const LandingText = styled(Title)`
 	font-weight: bold;
-	font-size: 50px;
+	font-size: 55px;
 	color: black;
 
 	@media (max-width: 500px) {
@@ -49,8 +49,7 @@ export const Container = styled.div`
 	width: 85vw;
 	margin: 10vh auto 2vh;
 	z-index: 1;
-	background-color: white;
-	box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.25);
+
 
 `;
 
@@ -149,8 +148,9 @@ export const StatesContainerSmall = styled.div`
 
 export const HeroImg = styled.img`
 	display: block;
-	margin: auto;
+	margin-top: auto;
 	margin-left: 25%;
+	
 	@media (max-width: 1000px) {
 		width: 100%;
 	}
@@ -174,8 +174,8 @@ export const IconContainer = styled.div`
 export const ButtonContainer = styled.div`
 
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
 	justify-content: space-around;
+	grid-template-columns: repeat(3, 1fr);
 	column-gap: 70px;
 	row-gap: 30px;
 
