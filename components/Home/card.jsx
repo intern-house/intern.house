@@ -26,4 +26,3 @@ function CardView(props) {
 }
 
 export default CardView;
-
