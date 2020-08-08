@@ -12,7 +12,8 @@ import {
 	CardSectionText,
 	CardContainer,
 	HeroImgLeft,
-	ButtonContainer,
+	CityButtonContainer,
+	CityButton,
 } from './styles';
 
 import { Row, Col, Typography, Form, Input, Button } from 'antd';
@@ -37,7 +38,7 @@ function HomeContainer() {
 			<Background>
 				<Container className={'p-3'} style={{ marginBottom: '25vh' }}>
 					<Row>
-						<Col md={24} lg={12} className={'p-xs-1 p-md-3 p-lg-5'}>
+						<Col md={24} lg={12} className={'p-xs-1 p-md-3 p-lg-4'}>
 							<LandingText>
 								Connect within your industry the right way with ease.
 							</LandingText>
@@ -56,7 +57,7 @@ function HomeContainer() {
 							</Title>
 						</Col>
 
-						<Col xs={0} md={0} lg={12} className={'mt-5'}>
+						<Col xs={0} lg={12} className={'mt-5'}>
 							<HeroImg src={'/svg/Landing/Hero-Images/people_SVG.svg'} />
 						</Col>
 					</Row>
@@ -101,7 +102,10 @@ function HomeContainer() {
 				<Container className={'p-3'} style={{ marginBottom: '25vh' }}>
 					<Row>
 						<Col xs={0} md={0} lg={12} className={'p-xs-1 p-md-3'}>
-							<HeroImgLeft className={'mt-5'} src="/svg/Landing/Hero-Images/City_SVG.svg" />
+							<HeroImgLeft
+								className={'mt-5'}
+								src="/svg/Landing/Hero-Images/City_SVG.svg"
+							/>
 						</Col>
 						<Col md={24} lg={12} className={'p-xs-1 p-md-3'}>
 							<LandingText className={'mb-4 mt-3'}>
@@ -112,53 +116,17 @@ function HomeContainer() {
 								with posts from sites like AirBnB, Zillow, Indeed, and many
 								more.
 							</Title>
-							<Title level={3}>
+							<Title level={3} className={'mb-5'}>
 								<a href="#">Search through our collections.</a>
 							</Title>
-							<ButtonContainer>
-								<Button
-									type={'primary'}
-									size={'large'}
-									style={{ borderRadius: '10px' }}
-									className={'mt-3'}>
-									Toronto
-								</Button>
-								<Button
-									type={'primary'}
-									size={'large'}
-									style={{ borderRadius: '10px' }}
-									className={'mt-3'}>
-									Vancouver
-								</Button>
-								<Button
-									type={'primary'}
-									size={'large'}
-									style={{ borderRadius: '10px' }}
-									className={'mt-3'}>
-									Waterloo
-								</Button>
-								<Button
-									type={'primary'}
-									size={'large'}
-									style={{ borderRadius: '10px' }}
-									className={'mt-3'}>
-									Ottawa
-								</Button>
-								<Button
-									type={'primary'}
-									size={'large'}
-									style={{ borderRadius: '10px' }}
-									className={'mt-3'}>
-									Montreal
-								</Button>
-								<Button
-									type={'primary'}
-									size={'large'}
-									style={{ borderRadius: '10px' }}
-									className={'mt-3'}>
-									London
-								</Button>
-							</ButtonContainer>
+							<CityButtonContainer>
+								<CityButton className={'mt-3'}>Toronto</CityButton>
+								<CityButton className={'mt-3'}>Vancouver</CityButton>
+								<CityButton className={'mt-3'}>Waterloo</CityButton>
+								<CityButton className={'mt-3'}>Ottawa</CityButton>
+								<CityButton className={'mt-3'}>Montreal</CityButton>
+								<CityButton className={'mt-3'}>London</CityButton>
+							</CityButtonContainer>
 						</Col>
 					</Row>
 				</Container>
