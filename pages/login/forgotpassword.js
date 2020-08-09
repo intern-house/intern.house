@@ -2,7 +2,7 @@ import Layout from '../../components/Layout';
 import { ForgetPasswordContainer } from '../../components/Login';
 
 const Index = () => (
-	<Layout title={'Forget Password'}>
+	<Layout title={'Forgot Password'}>
 		<ForgetPasswordContainer />
 	</Layout>
 );
